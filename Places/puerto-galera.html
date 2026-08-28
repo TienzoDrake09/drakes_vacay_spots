@@ -36,3 +36,39 @@
   </tr>
 </table>
 </main>
+
+<form>
+  <fieldset>
+    <legend>Suggestion Form</legend>
+  <p>
+    <label for="name">Your name</label><br>
+    <input type="text" id="name" name="name" required>
+  </p>
+  <p>
+    <label for="email">Your email</label><br>
+    <input type="email" id="email" name="email" required>
+  </p>
+  </fieldset>
+  <fieldset>
+    <legend>Suggestion Details</legend>
+    <p>
+    <label for="Place">Place:</label><br>
+    <input type="text" id="Place" name="Place" required>
+    </p>
+    <p>
+    <label for="Address">Address:</label><br>
+    <input type="text" id="Address" name="Address" required>
+    </p>
+    <p>
+    <br>
+    <label for="description">Place Description:</label>
+  <textarea id="description" name="description" rows="5" required></textarea>
+
+    <p>Add Ons</p>
+    <Input type="checkbox" id="gift-wrapped" name="gift-wrapped" value="gift-wrapped">
+        <label for="gift-wrapped">Gift Wrapped</label><br>
+    <Input type="checkbox" id="extended-warranty" name="extended-warranty" value="extended-warranty">
+        <label for="extended-warranty">Extended Warranty</label><br>
+    </fieldset>
+     <button type="submit">Submit Inquiry</button>
+</form>
