@@ -1,0 +1,127 @@
+/* ===== 1. Variables ===== */
+:root {
+  --brand: #177a70;
+  --brand-dark: #0b324f;
+  --ink: #1C2420;
+  --muted: #5D665C;
+  --paper: #F7F9F6;
+  --surface: #ffffff;
+  --line: #d8e6df;
+  --radius: 8px;
+  --space: 2rem;
+}
+
+/* ===== 2. Base / reset ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--ink);
+}
+
+/* ===== 3. Layout regions ===== */
+header {
+  padding: var(--space);
+  background: var(--brand-dark);
+  color: var(--surface);
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+nav li {
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+nav a {
+  color: var(--surface);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+main,
+form {
+  max-width: 900px;
+  margin: var(--space) auto;
+  padding: 1rem;
+}
+
+article {
+  margin-bottom: var(--space);
+  padding: 1.5rem;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 12px #0002;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+a {
+  color: var(--brand-dark);
+}
+
+form {
+  max-width: 700px;
+  background: var(--surface);
+  border-radius: var(--radius);
+}
+
+fieldset {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border: 1px solid var(--line);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.7rem;
+  margin-top: 0.3rem;
+  font: inherit;
+}
+
+button {
+  padding: 0.7rem 1.5rem;
+  border: 0;
+  border-radius: calc(var(--radius) / 2);
+  background: var(--brand);
+  color: var(--surface);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+button:hover {
+  background: var(--brand-dark);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  padding: 0.75rem;
+  border: 1px solid var(--line);
+  text-align: left;
+}
+
+th {
+  background: var(--brand);
+  color: var(--surface);
+}
