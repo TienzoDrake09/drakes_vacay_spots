@@ -99,6 +99,23 @@ a {
   text-decoration: none;
 }
 
+.place-link {
+  display: inline-block;
+  padding: 0.5rem 0.8rem;
+  background: var(--brand);
+  color: var(--surface);
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: calc(var(--radius) / 2);
+}
+
+.place-link:hover {
+  background: var(--brand-dark);
+  color: var(--surface);
+  text-decoration: none;
+}
+
 form {
   max-width: 700px;
   background: var(--surface);
