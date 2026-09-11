@@ -57,8 +57,14 @@ form {
   padding: 1rem;
 }
 
+.place-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
 .place-card {
-  margin-bottom: var(--space);
+  flex: 1 1 240px;
   padding: 1.5rem;
   background: var(--surface);
   border: 1px solid var(--line);
