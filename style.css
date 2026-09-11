@@ -25,21 +25,23 @@ body {
 
 /* ===== 3. Layout regions ===== */
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: var(--space);
   background: var(--brand-dark);
   color: var(--surface);
-  text-align: center;
 }
 
 nav ul {
+  display: flex;
   list-style: none;
   padding: 0;
-  text-align: center;
+  gap: 20px;
 }
 
 nav li {
-  display: inline-block;
-  margin: 0 1rem;
+  margin: 0;
 }
 
 nav a {
