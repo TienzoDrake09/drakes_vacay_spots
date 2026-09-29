@@ -37,15 +37,16 @@ a {
 /* ===== 3. Named grid layout ===== */
 .page {
   display: grid;
-  grid-template-columns: 220px minmax(0, 1fr);
+  grid-template-columns: 1fr;
   grid-template-areas:
-    "header header"
-    "aside main"
-    "footer footer";
-  gap: 1.5rem 2rem;
+    "header"
+    "main"
+    "aside"
+    "footer";
+  gap: 1.5rem 0;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem;
+  padding: 0;
 }
 
 header {
@@ -231,23 +232,22 @@ th {
   color: var(--surface);
 }
 
-@media (max-width: 760px) {
+@media (min-width: 760px) {
   .page {
-    grid-template-columns: 1fr;
+    grid-template-columns: 220px minmax(0, 1fr);
     grid-template-areas:
-      "header"
-      "aside"
-      "main"
-      "footer";
+      "header header"
+      "aside main"
+      "footer footer";
   }
 
   header {
-    flex-direction: column;
-    text-align: center;
+    flex-direction: row;
+    text-align: left;
   }
 
   nav ul {
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
   }
 }
