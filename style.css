@@ -21,16 +21,75 @@ body {
   font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
   line-height: 1.6;
   color: var(--ink);
+  background: var(--paper);
 }
 
-/* ===== 3. Layout regions ===== */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+
+a {
+  color: var(--brand-dark);
+}
+
+/* ===== 3. Named grid layout ===== */
+.page {
+  display: grid;
+  grid-template-columns: 220px minmax(0, 1fr);
+  grid-template-areas:
+    "header header"
+    "aside main"
+    "footer footer";
+  gap: 1.5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
 header {
+  grid-area: header;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: var(--space);
   background: var(--brand-dark);
   color: var(--surface);
+  border-radius: var(--radius);
+}
+
+.page-aside {
+  grid-area: aside;
+  align-self: start;
+  padding: 1.25rem;
+  background: #edf6f2;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.page-aside h2 {
+  margin-top: 0;
+  color: var(--brand-dark);
+}
+
+.page-aside ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+main {
+  grid-area: main;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  grid-area: footer;
+  padding: 1rem 0 2rem;
+  text-align: center;
+  color: var(--muted);
 }
 
 nav ul {
@@ -48,13 +107,6 @@ nav a {
   color: var(--surface);
   font-weight: bold;
   text-decoration: none;
-}
-
-main,
-form {
-  max-width: 900px;
-  margin: var(--space) auto;
-  padding: 1rem;
 }
 
 .place-grid {
@@ -77,16 +129,6 @@ form {
   margin-top: 0;
   color: var(--brand-dark);
   font-size: 1.75rem;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 6px;
-}
-
-a {
-  color: var(--brand-dark);
 }
 
 .suggestion-link {
@@ -187,4 +229,25 @@ td {
 th {
   background: var(--brand);
   color: var(--surface);
+}
+
+@media (max-width: 760px) {
+  .page {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "aside"
+      "main"
+      "footer";
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
 }
