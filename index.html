@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Drake's Vacation Spots</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
   </head>
   <body>
     <div class="page">
       <header>
-        <h1>Drake's Vacation Spots</h1>
+        <h1 id="guide-name">Drake's Vacation Spots</h1>
         <nav>
           <ul>
             <li><a href="index.html">Home</a></li>
@@ -63,7 +64,13 @@
       </main>
 
       <footer>
-        <p>© 2026 Drake's Vacation Spots</p>
+        <section aria-labelledby="site-stats-heading">
+          <h2 id="site-stats-heading">Site Stats</h2>
+          <p>Places reviewed: <span id="reviewed-count">Calculating...</span></p>
+          <p>Average rating: <span id="average-rating">Calculating...</span></p>
+          <p>Places by category: <span id="category-counts">Calculating...</span></p>
+        </section>
+        <p id="copyright"></p>
       </footer>
     </div>
   </body>
